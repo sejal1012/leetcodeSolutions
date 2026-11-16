@@ -4,12 +4,11 @@ class Solution:
         ticketsQ = deque(tickets)
         pointer = k
         count = 0
-        while(tickets[pointer] != 0):
+        while(True):
             ticketsQ[0] -= 1
             count += 1
             if(ticketsQ[0] == 0):
                 if(pointer == 0):
-                    # print(count)
                     break
                 ticketsQ.popleft()
             else:
