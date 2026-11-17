@@ -4,6 +4,8 @@ class Solution:
         numHeap = []
         for i,n in enumerate(nums2):
             heapq.heappush(numHeap, (n+nums1[0], 0, i))
+            if i == k:
+                break
         result = []
         while(len(result) < k):
             res = heapq.heappop(numHeap)
